@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sokoban move rules</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <dl>
+      <dt>Floor/Empty</dt>
+      <dd><div class="floor box"></div></dd>
+      <dt>Crate on floor</dt>
+      <dd><div class="crate floor box"></div></dd>
+      <dt>Crate on goal</dt>
+      <dd><div class="crate goal box"></div></dd>
+      <dt>Goal</dt>
+      <dd><div class="goal box"></div></dd>
+      <dt>Player on floor</dt>
+      <dd>
+        <div class="player floor box">
+          <i class="material-icons">&#xe8a6;</i>
+        </div>
+      </dd>
+      <dt>Player on goal</dt>
+      <dd>
+        <div class="player goal box">
+          <i class="material-icons">&#xe8a6;</i>
+        </div>
+      </dd>
+      <dt>Wall</dt>
+      <dd><div class="wall box"></div></dd>
+      <dt>Will move</dt>
+      <dd><i class="material-icons canMove">&#xe86c;</i></dd>
+      <dt>Will not move</dt>
+      <dd><i class="material-icons noMove">&#xe888;</i></dd>
+    </dl>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>Block scenario</th>
+          <th>result of move</th>
+          <th>Result in movment?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="floor box"></div>
+          </td>
+          <td>
+            <div class="floor box"></div>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <i class="material-icons canMove">&#xe86c;</i>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="goal box"></div>
+          </td>
+          <td>
+            <div class="floor box"></div>
+            <div class="player goal box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <i class="material-icons canMove">&#xe86c;</i>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate floor box"></div>
+            <div class="floor box"></div>
+          </td>
+          <td>
+            <div class="floor box"></div>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate floor box"></div>
+          </td>
+          <td>
+            <div class="box">
+              <i class="material-icons canMove">&#xe86c;</i>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate floor box"></div>
+            <div class="goal box"></div>
+          </td>
+          <td>
+            <div class="floor box"></div>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate goal box"></div>
+          </td>
+          <td>
+            <div class="box">
+              <i class="material-icons canMove">&#xe86c;</i>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="wall box"></div>
+          </td>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="wall box"></div>
+          </td>
+          <td>
+            <div class="box">
+              <i class="material-icons noMove">&#xe888;</i>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate floor box"></div>
+            <div class="wall box"></div>
+          </td>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate floor box"></div>
+            <div class="wall box"></div>
+          </td>
+          <td>
+            <div class="box">
+              <i class="material-icons noMove">&#xe888;</i>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate floor box"></div>
+            <div class="crate floor box"></div>
+          </td>
+          <td>
+            <div class="player floor box">
+              <i class="material-icons">&#xe8a6;</i>
+            </div>
+            <div class="crate floor box"></div>
+            <div class="crate floor box"></div>
+          </td>
+          <td>
+            <div class="box">
+              <i class="material-icons noMove">&#xe888;</i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

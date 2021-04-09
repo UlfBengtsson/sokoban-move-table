@@ -1,0 +1,87 @@
+dt {
+  float: left;
+}
+dd {
+  margin-left: 105px;
+  margin-bottom: 3px;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+}
+
+td > .box {
+  float: left;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: rgba(224, 255, 215, 0.87);
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+.wall {
+  background-color: grey;
+  border: 3px solid gray;
+}
+
+.floor {
+  background-color: wheat;
+  border: 3px solid wheat;
+}
+
+.goal {
+  background-color: goldenrod;
+  border: 3px solid goldenrod;
+}
+
+.crate {
+  background-color: rgb(165, 81, 42);
+}
+.crate.floor {
+  border: 3px solid wheat;
+}
+.crate.goal {
+  border: 3px solid goldenrod;
+}
+
+.player {
+  background-color: green;
+  color: white;
+}
+.player.floor {
+  border: 3px solid wheat;
+}
+.player.goal {
+  border: 3px solid goldenrod;
+}
+
+.canMove {
+  color: green;
+}
+.noMove {
+  color: red;
+}
